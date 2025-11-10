@@ -114,7 +114,7 @@ def chain_predict(topic, post_type, content_points):
     refined_result = refiner(raw_post=refinement_prompt)
     return refined_result.refined_post
 
-# ================== SAVE MODEL & MEMORY ==================
+# SAVE MODEL & MEMORY
 with open("persona_optimized_chain.pkl", "wb") as f:
     pickle.dump((base_predictor, refiner), f)
 
